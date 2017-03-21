@@ -1,0 +1,35 @@
+
+.new-tweet {
+  border: solid;
+  border-color: #d7d7d7;
+  border-radius: .5em;
+  background-color: #e8e8e8;
+  padding-bottom: .5em;
+}
+
+.new-tweet h2 {
+  /*border-bottom makes the line thiner*/
+  border-bottom: 2px;
+  /*border-bottom-style: solid; makes the actual line*/
+  border-bottom-style: solid;
+  /*margin: 3%; gives the space before the box*/
+  margin: 3%;
+  text-align: left;
+}
+
+.new-tweet textarea {
+  margin: 0;
+  margin-top: 2%;
+  padding: 2%;
+  width: 94%;
+  resize: none;
+}
+
+.new-tweet form input {
+  margin-right: 83%;
+}
+
+.new-tweet form span {
+  margin-left: -10%;
+  font-style: italic;
+}
