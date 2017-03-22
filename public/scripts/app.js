@@ -52,6 +52,10 @@ $(function (){
       $('.all-tweets').addClass('err');
     });
   });
+  $("button.compose").on('click', () => {
+    $('.new-tweet').slideToggle('normal');
+    $('textarea').focus();
+  });
 });
 
 function escape(str) {
