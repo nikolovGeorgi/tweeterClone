@@ -16,13 +16,12 @@
   padding-bottom: 30px;
   margin-bottom: 10px;
 }
-.all-tweets article :hover {
+/*.all-tweets article :hover {
   background: #e8e8e8;
-  box-shadow: #e8e8e8;
   text-shadow: #e8e8e8;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-}
+}*/
 .all-tweets article em {
   float: right;
   padding-right: 2%;
@@ -64,4 +63,11 @@
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 5px;
+}
+.all-tweets article footer img {
+  float: right;
+  padding-bottom: 8px;
+  padding-right: 8px;
+  margin:0;
+  margin-bottom: 4px;
 }
