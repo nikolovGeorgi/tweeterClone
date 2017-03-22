@@ -5,6 +5,7 @@
   border-radius: .5em;
   border-bottom-style: none;
   padding-bottom: -1em;
+  margin-top: 20px;
 }
 
 .all-tweets article header h2 {
