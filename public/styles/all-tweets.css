@@ -1,18 +1,17 @@
 .all-tweets{
-  /*border: solid;*/
-  /*border-width: 2px;
-  border-color: #d7d7d7;
-  border-radius: .5em;
-  border-bottom-style: none;*/
   padding-bottom: -1em;
   margin-top: 20px;
   margin-bottom: 10px;
+  z-index: 1;
 }
 
-.all-tweets article header h2 {
+.all-tweets article {
   border: solid;
   border-color: #d7d7d7;
+  border-radius: .5em;
   border-bottom: none;
+}
+.all-tweets article header h2 {
   background-color: #e8e8e8;
   text-align: left;
   padding-top: 10px;
@@ -21,12 +20,7 @@
   padding-bottom: 30px;
   margin-bottom: 10px;
 }
-.all-tweets article :hover {
-  background: #e8e8e8;
-  text-shadow: #e8e8e8;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
+
 .all-tweets article em {
   float: right;
   padding-right: 2%;
@@ -42,17 +36,14 @@
   margin-left: 8px;
 }
 .all-tweets article p {
-  border: solid;
-  border-color: #d7d7d7;
-  border-bottom: none;
-  border-top: none;
   background-color: white;
   text-align: left;
   margin-top: 4%;
   margin-bottom: 6%;
-  padding-left: 5px;
+  padding-left: 10px;
   padding-top: 20px;
   padding-bottom: 10px;
+  word-wrap: break-word;
 }
 
 .all-tweets article footer {
@@ -70,12 +61,31 @@
   text-align: left;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 5px;
+  padding-left: 10px;
 }
-.all-tweets article footer img {
+.all-tweets article footer i {
   float: right;
+  cursor: pointer;
+  color: #00a087;
+  opacity: 0.5;
   padding-bottom: 8px;
   padding-right: 8px;
   margin:0;
   margin-bottom: 4px;
+}
+
+.all-tweets article:hover{
+  box-shadow: 5px 5px 15px black;
+}
+article.tweet:hover h2.userName {
+  background-color: #dbdbdb;
+  filter: blur(50%);
+  border-radius: 2px;
+  text-shadow: 1px 1px 10px #c6c6c6;
+}
+.all-tweets article:hover header img {
+  box-shadow: 1px 1px 5px black;
+}
+.all-tweets article footer i:hover{
+  opacity: 1;
 }

@@ -1,51 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
-    <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
-    <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-
-    <!-- App JS -->
-    <!-- <script type="text/javascript" src="/scripts/app.js"></script> -->
-
-    <script type="text/javascript" src="/scripts/eventListenerExample.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/all-tweets.js"></script>
-
-    <!-- Custome Stylesheets -->
-
-    <!-- Roboto Condensed Font -->
-    <!-- Customized for 300,700 italic/bold font -->
+    <script src="https://use.fontawesome.com/7166d90cbb.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
-
-    <!--- Nav Related Stylesheet --->
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css">
-
-    <!--- Form Related Stylesheet --->
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css">
-    <link rel="stylesheet" href="/styles/all-tweets.css" type="text/css">
-
+    <link rel="stylesheet" href="/styles/tweeterStyles.css" type="text/css">
   </head>
 
   <body>
-
-    <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
-      <button class="compose">Compose</button>
+      <button class="compose"><i class="fa fa-pencil-square-o" aria-hidden="true">Compose</i></button>
     </nav>
-    <!-- Page-specific (main) content here -->
-    <main class="container">
 
+    <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="post">
@@ -54,26 +27,12 @@
           <span class="counter">140</span>
         </form>
       </section>
-
       <section class="all-tweets">
-        <!-- <article>
-          <header>
-            <img class="userAvatar" src="/images/Descartes.png">
-            <h2>User Name <em>@rd</em> </h2>
-          </header>
-          <p>Little tweet here</p>
-          <footer>
-            <span class="date-created">10 days ago</span>
-            <img src="https://cdn3.iconfinder.com/data/icons/sympletts-free-sampler/128/round-bubble-heart-24.png"</img>
-            <img src="https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-14-24.png"</img>
-            <img src="https://cdn1.iconfinder.com/data/icons/freeline/32/flag_notice_warning-24.png"</img>
-
-          </footer>
-        </article> -->
+        <!-- Generated Tweets Here -->
       </section>
-
     </main>
-    <script type="text/javascript" src="/scripts/app.js"></script>
 
+    <script type="text/javascript" src="/scripts/app.js"></script>
   </body>
+  
 </html>

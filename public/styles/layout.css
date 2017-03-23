@@ -9,7 +9,6 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
 /*
  * Global layout stuff
  */
@@ -28,6 +27,7 @@ main {
   margin: auto;
   background-color: white;
   text-align: center;
+  z-index: 1;
 }
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
@@ -35,4 +35,5 @@ main {
 
 section {
   margin: 2em;
+  z-index: 1;
 }

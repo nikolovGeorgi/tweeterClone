@@ -1,4 +1,3 @@
-
 .new-tweet {
   border: solid;
   border-color: #d7d7d7;
@@ -23,12 +22,25 @@
   padding: 2%;
   width: 94%;
   resize: none;
+  border-radius: 5px;
 }
 
 .new-tweet form input {
+  cursor: pointer;
   margin-right: 83%;
+  border: solid;
+  border-width: .5px;
+  border-radius: 4px;
+  border-color: #00a087;
+  background-color: #d7faee;
+  color: #005447;
 }
-
+.new-tweet:hover {
+  box-shadow: 1px 1px 6px black;
+}
+.new-tweet form input:hover {
+  box-shadow: 2px 2px 6px black;
+}
 .new-tweet form span {
   margin-left: -10%;
   font-style: italic;

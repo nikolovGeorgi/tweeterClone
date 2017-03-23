@@ -3,7 +3,12 @@ function createTweetElement(obj) {
   let userAvatar = (obj.user.avatars.small);
   let handle = (obj.user.handle);
   let tweetText = (obj.content.text);
-  let date = new Date(obj.created_at);
+  let date = timeCalculator(obj);
+
+  let icons = ['heart', 'retweet', 'flag', 'trash'].map(function(icon) {
+    return "<i class='fa fa-" + icon + "' aria-hidden='true'></i>";
+  }).join('');
+
   return [
     "<article class='tweet'>",
       "<header>",
@@ -14,18 +19,17 @@ function createTweetElement(obj) {
       "<p>", tweetText, "</p>",
       "<footer>",
         "<span class='date-created'>", date, "</span>",
-        "<img src='https://cdn1.iconfinder.com/data/icons/freeline/32/flag_notice_warning-24.png'>", "</img>",
-        "<img src='https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-14-24.png'>", "</img>",
-        "<img src='https://cdn3.iconfinder.com/data/icons/sympletts-free-sampler/128/round-bubble-heart-24.png'>", "</img>",
+        icons,
       "</footer>",
     "</article>"
   ].join('');
 }
+
 function renderTweets(tweetData){
   let tweets = $('.all-tweets');
-  tweetData.map(function(element){
+  tweetData.forEach(function(element){
     let newTweet = createTweetElement(element);
-    return tweets.prepend(newTweet);
+    tweets.prepend(newTweet);
   });
 }
 // Get current Tweets from Existing Tweets DataBase
@@ -35,7 +39,7 @@ function loadTweets(){
     url: '/tweets'
   }).done(renderTweets);
 }
-$(function (){
+$(function(){
   loadTweets();
   // When creating a new Tweet
   $('.new-tweet input').on('click', function (event) {
@@ -62,4 +66,18 @@ function escape(str) {
   var article = document.createElement('article');
   article.appendChild(document.createTextNode(str));
   return article.innerHTML;
+}
+function timeCalculator(obj) {
+  const currentTime = new Date().getTime();
+  const difference = Math.abs(currentTime - obj.created_at) / (1000 * 3600);
+
+  if (difference < 1) {
+    return "less than 1 hours ago";
+  }
+  else if (difference <= 24) {
+    return `${Math.floor(difference)} hours ago`;
+  }
+  else {
+    return`${Math.floor(difference / 24)} days ago`;
+  }
 }

@@ -8,15 +8,45 @@
   padding-right: 2em;
   top: 0;
   left: 0;
+  z-index: 2;
 }
 
-#nav-bar .logo{
+#nav-bar .logo {
   width: 80px;
   height: 80px;
   float: left;
 }
-#nav-bar .header{
+
+#nav-bar .header {
   float: left;
   font-size: 2em;
   line-height: 250%;
+}
+
+#nav-bar .compose {
+  cursor: pointer;
+  border: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: #d7faee;
+  text-align: right;
+  height: 50px;
+  width: 100px;
+  float: right;
+  top: 0;
+  z-index: 1;
+  padding-left: 10px;
+  margin-top: 16px;
+}
+#nav-bar .compose:hover {
+  box-shadow: 2px 2px 8px black;
+}
+#nav-bar i.fa.fa-pencil-square-o {
+  float: left;
+  color: #00a087;
+}
+#nav-bar i.fa.fa-pencil-square-o:hover {
+  filter: brightness(80%);
+  filter: drop-shadow(50%);
+  text-shadow: 0 0 .5px #00a087, 0 0 .5px #b5fbef, 0 0 1px #acf0f6;
 }
