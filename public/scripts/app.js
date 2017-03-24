@@ -1,9 +1,11 @@
 function createTweetElement(obj) {
+  console.log(obj);
   let userName = (obj.user.name);
   let userAvatar = (obj.user.avatars.small);
   let handle = (obj.user.handle);
   let tweetText = (obj.content.text);
   let date = timeCalculator(obj);
+
 
   let icons = ['heart', 'retweet', 'flag', 'trash'].map(function(icon) {
     return "<i class='fa fa-" + icon + "' aria-hidden='true'></i>";
@@ -34,6 +36,7 @@ function renderTweets(tweetData){
 }
 // Get current Tweets from Existing Tweets DataBase
 function loadTweets(){
+  console.log("----- i here ---");
   $.ajax({
     method: 'get',
     url: '/tweets'
