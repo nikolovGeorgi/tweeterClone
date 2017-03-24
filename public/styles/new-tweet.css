@@ -24,10 +24,10 @@
   resize: none;
   border-radius: 5px;
 }
-
 .new-tweet form input {
   cursor: pointer;
   margin-right: 83%;
+  margin-top: 2%;
   border: solid;
   border-width: .5px;
   border-radius: 4px;

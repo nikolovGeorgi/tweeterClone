@@ -1,5 +1,4 @@
 function createTweetElement(obj) {
-  console.log(obj);
   let userName = (obj.user.name);
   let userAvatar = (obj.user.avatars.small);
   let handle = (obj.user.handle);
@@ -36,7 +35,6 @@ function renderTweets(tweetData){
 }
 // Get current Tweets from Existing Tweets DataBase
 function loadTweets(){
-  console.log("----- i here ---");
   $.ajax({
     method: 'get',
     url: '/tweets'
@@ -47,6 +45,8 @@ $(function(){
   // When creating a new Tweet
   $('.new-tweet input').on('click', function (event) {
     event.preventDefault();
+    let isText = $('form').serialize();
+    console.log(isText);
     $.ajax({
       method: 'post',
       url: '/tweets',

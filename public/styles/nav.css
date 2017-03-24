@@ -29,6 +29,8 @@
   border-width: 1px;
   border-radius: 4px;
   background-color: #d7faee;
+  color: #00a087;
+  border-color: #008e77;
   text-align: right;
   height: 50px;
   width: 100px;
@@ -43,6 +45,8 @@
 }
 #nav-bar i.fa.fa-pencil-square-o {
   float: left;
+  padding-right: 5px;
+  padding-top: 2px;
   color: #00a087;
 }
 #nav-bar i.fa.fa-pencil-square-o:hover {
