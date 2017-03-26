@@ -1,5 +1,196 @@
-@import "/vendor/normalize-4.1.1.css";
-@import "layout.css";
-@import "nav.css";
-@import "new-tweet.css";
-@import "all-tweets.css";
+@import url(/vendor/normalize-4.1.1.css);
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/*
+ * Global layout stuff
+ */
+body {
+  margin: 0;
+  color: #244751;
+  background-color: #eee;
+  font-family: 'Roboto Condensed', sans-serif; }
+
+main {
+  width: 450px;
+  padding-top: 100px;
+  padding-bottom: 140px;
+  margin: auto;
+  background-color: white;
+  text-align: center;
+  z-index: 1; }
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+section {
+  margin: 2em;
+  z-index: 1; }
+
+#nav-bar {
+  height: 80px;
+  width: 100%;
+  background-color: #00a087;
+  color: #e8fdff;
+  position: fixed;
+  padding-left: 2em;
+  padding-right: 2em;
+  top: 0;
+  left: 0;
+  z-index: 2; }
+  #nav-bar .logo {
+    width: 80px;
+    height: 80px;
+    float: left; }
+  #nav-bar .header {
+    float: left;
+    font-size: 2em;
+    line-height: 250%; }
+  #nav-bar .compose {
+    cursor: pointer;
+    border: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    background-color: #d7faee;
+    color: #00a087;
+    border-color: #00a087;
+    text-align: right;
+    height: 50px;
+    width: 100px;
+    float: right;
+    top: 0;
+    z-index: 1;
+    padding-left: 10px;
+    margin-top: 16px; }
+    #nav-bar .compose:hover {
+      box-shadow: 2px 2px 8px black; }
+  #nav-bar i.fa.fa-pencil-square-o {
+    float: left;
+    padding-right: 5px;
+    padding-top: 2px;
+    color: #00a087; }
+    #nav-bar i.fa.fa-pencil-square-o:hover {
+      filter: brightness(80%);
+      filter: drop-shadow(50%);
+      text-shadow: 0 0 0.5px #00a087, 0 0 0.5px #b5fbef, 0 0 1px #acf0f6; }
+
+.new-tweet {
+  border: solid;
+  border-color: #d7d7d7;
+  border-radius: 0.5em;
+  background-color: #e8e8e8;
+  padding-bottom: 0.5em; }
+  .new-tweet:hover {
+    box-shadow: 1px 1px 6px black; }
+  .new-tweet h2 {
+    border-bottom: 2px;
+    border-bottom-style: solid;
+    margin: 3%;
+    text-align: left; }
+  .new-tweet textarea {
+    margin: 0;
+    margin-top: 2%;
+    padding: 2%;
+    width: 94%;
+    resize: none;
+    border-radius: 5px; }
+  .new-tweet form input {
+    cursor: pointer;
+    margin-right: 83%;
+    margin-top: 2%;
+    border: solid;
+    border-width: 0.5px;
+    border-radius: 4px;
+    border-color: #00a087;
+    background-color: #d7faee;
+    color: #005447; }
+    .new-tweet form input:hover {
+      box-shadow: 2px 2px 6px black; }
+  .new-tweet form span {
+    margin-left: -10%;
+    font-style: italic; }
+
+.all-tweets {
+  padding-bottom: -1em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  z-index: 1; }
+  .all-tweets article {
+    border: solid;
+    border-color: #d7d7d7;
+    border-radius: 0.5em;
+    border-bottom: none; }
+    .all-tweets article header h2 {
+      background-color: #e8e8e8;
+      text-align: left;
+      padding-top: 10px;
+      padding-left: 70px;
+      margin: 0;
+      padding-bottom: 30px;
+      margin-bottom: 10px; }
+    .all-tweets article em {
+      float: right;
+      padding-right: 2%;
+      margin-top: -17%;
+      font-size: medium;
+      font-weight: normal; }
+    .all-tweets article img {
+      border-radius: 0.5em;
+      float: left;
+      margin-top: 8px;
+      margin-left: 8px; }
+    .all-tweets article p {
+      background-color: white;
+      text-align: left;
+      margin-top: 4%;
+      margin-bottom: 6%;
+      padding-left: 10px;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      word-wrap: break-word; }
+    .all-tweets article:hover h2.userName {
+      background-color: #dbdbdb;
+      filter: blur(50%);
+      border-radius: 2px;
+      text-shadow: 1px 1px 10px #c6c6c6; }
+    .all-tweets article footer {
+      border: solid;
+      border-color: #d7d7d7;
+      border-width: 2px;
+      border-bottom-right-radius: 0.5em;
+      border-bottom-left-radius: 0.5em;
+      background-color: white;
+      margin-top: 20px;
+      margin-right: -0.7%;
+      margin-left: -0.5%;
+      margin-bottom: 20px;
+      font-size: small;
+      text-align: left;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 10px; }
+    .all-tweets article footer i {
+      float: right;
+      cursor: pointer;
+      color: #00a087;
+      opacity: 0.5;
+      padding-bottom: 8px;
+      padding-right: 8px;
+      margin: 0;
+      margin-bottom: 4px; }
+      .all-tweets article footer i:hover {
+        opacity: 1; }
+    .all-tweets article:hover {
+      box-shadow: 5px 5px 15px black; }
+      .all-tweets article:hover header img {
+        box-shadow: 1px 1px 5px black; }
+
+/*# sourceMappingURL=tweeterStyles.css.map */

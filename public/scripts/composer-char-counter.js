@@ -24,4 +24,7 @@ function cb (){
       $(this).siblings('.counter').text('Limit Reached!', output).css('color', "red");
     }
   });
+  $('form :submit').on('click', () => {
+    $('span.counter').text('140');
+  });
 }

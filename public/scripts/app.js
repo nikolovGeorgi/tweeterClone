@@ -4,10 +4,8 @@ function createTweetElement(obj) {
   let handle = (obj.user.handle);
   let tweetText = (obj.content.text);
   let date = timeCalculator(obj);
-
-
   let icons = ['heart', 'retweet', 'flag', 'trash'].map(function(icon) {
-    return "<i class='fa fa-" + icon + "' aria-hidden='true'></i>";
+    return "<i class='fa fa-" + icon + "' aria-hidden='true'></i>"
   }).join('');
 
   return [
@@ -42,11 +40,8 @@ function loadTweets(){
 }
 $(function(){
   loadTweets();
-  // When creating a new Tweet
   $('.new-tweet input').on('click', function (event) {
     event.preventDefault();
-    let isText = $('form').serialize();
-    console.log(isText);
     $.ajax({
       method: 'post',
       url: '/tweets',
